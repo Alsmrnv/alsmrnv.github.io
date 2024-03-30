@@ -1,0 +1,65 @@
+header {
+  margin: 40px;
+  
+}
+
+.first_title {
+  font-family: Courier, monospace;
+  font-size: 20px;
+  margin: 20px;
+  color: #808080;
+}
+
+.desc {
+  margin: auto;
+  background-color: #AFCBC1;
+  width: auto;
+  text-align: center;
+}
+
+.avatar {
+  width: 300px;
+  height: 300px;
+}
+
+.my_profile {
+  
+}
+
+.my_name {
+  font-family: Courier, monospace;
+  font-size: 28px;
+}
+
+.my_status {
+  font-family: Courier, monospace;
+  font-size: 20px;
+  padding-bottom: 15px;
+}
+
+.main_part {
+  margin-top: 60px;
+}
+
+.skills {
+  font-size: 40px;
+  font-family: Courier, monospace;
+  text-align: center;
+}
+
+.skill_name {
+  margin-left: 20px;
+  font-size: 32px;
+}
+
+.footer {
+  border-top: 1px solid rgba(84, 84, 84, 1);
+  margin-top: 50px;
+}
+
+.contacts {
+  font-family: Courier, monospace;
+  font-size: 20px;
+  margin: 20px;
+
+}
