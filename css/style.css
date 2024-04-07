@@ -3,53 +3,53 @@ header {
 }
 
 .first_title {
-  border-bottom: 1px solid rgba(84, 84, 84, 1);
   font-family: Courier, monospace;
   font-size: 20px;
-  margin: 20px;
+  margin: 0;
   color: #808080;
 }
 
-.desc {
+.line {
+  border-bottom: 1px solid rgba(84, 84, 84, 1);
+  width: 50%;
+}
+
+.description {
   margin: auto;
   background-color: #AFCBC1;
   width: auto;
   text-align: center;
 }
 
-.avatar {
+.description__avatar {
   padding-top: 30px;
   width: 300px;
 }
 
-.my_profile {
-  
-}
-
-.my_name {
+.description__my-name {
   font-family: Courier, monospace;
   font-size: 28px;
 }
 
-.my_status {
+.description__my-status {
   font-family: Courier, monospace;
   font-size: 20px;
   padding-bottom: 15px;
 }
 
-.cl_skills{
+.main-part__cl-skills{
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.skills {
+.main-part__skills {
   font-size: 40px;
   font-family: Courier, monospace;
   text-align: center;
 }
 
-.skills_list {
+.main-part__skills-list {
   margin: 0;
   padding: 0;
   display: flex;
@@ -58,7 +58,7 @@ header {
   text-align: center;
 }
 
-.skill_name {
+.main-part__skill-name {
   margin-right: 27px;
   margin-bottom: 10px;
   padding: 5px 10px;
@@ -67,19 +67,19 @@ header {
   font-size: 30px;
 }
 
-.cl_education{
+.cl-education{
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.education {
+.cl-education__education {
   font-size: 40px;
   font-family: Courier, monospace;
   text-align: center;
 }
 
-.education_list {
+.cl-education__education-list {
   margin: 0;
   padding: 0;
   display: flex;
@@ -88,7 +88,7 @@ header {
   text-align: center;
 }
 
-.education_name {
+.cl-education__education-name {
   margin-right: 27px;
   margin-bottom: 10px;
   padding: 5px 10px;
@@ -97,12 +97,12 @@ header {
   font-size: 30px;
 }
 
-.faculty {
+.cl-education__faculty {
   padding-left: 30px;
   padding-right: 30px;  
 }
 
-.university {
+.cl-education__university {
   font-size: 30px;
 }
 
@@ -112,36 +112,28 @@ header {
   font-size: 30;
 }
 
-.contacts {
+.footer__contacts {
   font-family: Courier, monospace;
   font-size: 20px;
   margin: 20px;
 }
 
-.button_list {
+.footer__button-list {
   display: block;
 }
 
-.button {
+.footer__button {
   margin-right: 5px;
   margin-left: 5px;
 }
 
-.but_image {
+.footer__but-image {
   width: 60px;
   margin-left: 10px;
 }
 
-.vk_image {
+.footer__vk-image {
   margin-left: 20px;
-
-}
-
-.github_image {
-
-}
-
-.telegram_image {
 
 }
 
