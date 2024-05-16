@@ -50,6 +50,31 @@
       </ul>
     </div>
   </section>
+  <section class="photos">
+    <h2 class="photos__name">Some cats</h2>
+    <ul class="photos__list">
+      <li class="photos__three">
+        <img class="photos__cat" src="images/cat1.jpg" alt="Cat1">
+      </li>
+      <li class="photos__three">
+        <img class="photos__cat" src="images/cat2.jpeg" alt="Cat2">
+      </li>
+      <li class="photos__three">
+        <img class="photos__cat" src="images/cat3.jpg" alt="Cat3">
+      </li>
+    </ul>
+  </section>
+  <section class="countdown">
+    <h1 class="countdown__name">Countdown to my graduation from university</h1>
+    <div class="countdown__timer">
+      <ul>
+        <li class="countdown__time"><span id="days"></span>Days</li>
+        <li class="countdown__time"><span id="hours"></span>Hours</li>
+        <li class="countdown__time"><span id="minutes"></span>Minutes</li>
+        <li class="countdown__time"><span id="seconds"></span>Seconds</li>
+      </ul>
+    </div>
+  </section>
   <div class="popup js-timer-popup">
     <div class="popup__container">
       <button class="close-btn popup__close-button js-popup-closer" type="button" aria-label="Закрыть">
@@ -57,9 +82,8 @@
           <path d="M9.11941 21.7011L21 9.70113M20.8806 21.7011L9 9.70113" stroke="black" stroke-width="2"
             stroke-linecap="round"></path>
         </svg>
-        <p>Текстшрашр шршрша шраш4</p>
+        <p>Вы еще здесь?</p>
       </button>
-      
     </div>
   </div>
   <div class="popup js-form-popup">
@@ -70,30 +94,23 @@
             stroke-linecap="round"></path>
         </svg>
       </button>
-
       <h2 class="popup__title">Feedback form</h2>
-
       <form class="popup__form" name="profile-edit" novalidate="">
         <fieldset class="popup__fieldset">
           <input class="popup__input popup__input_email" type="email" name="email" placeholder="E-mail" required=""
             pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
-          <p class="popup__error-message popup__error-message_email popup__error-message_disabled">Incorrect e-mail
-          </p>
-
+          <p class="popup__error-message popup__error-message_email popup__error-message_disabled">Incorrect e-mail</p>
           <input class="popup__input popup__input_text" type="text" name="text" placeholder="Message (10-100 symbols)"
             required="" pattern="[a-zA-Z0-9 .(),<>!?;:*%@]{10,100}">
-          <p class="popup__error-message popup__error-message_text popup__error-message_disabled">Incorrect message
-          </p>
+          <p class="popup__error-message popup__error-message_text popup__error-message_disabled">Incorrect message</p>
         </fieldset>
-
         <button class="popup__save-button popup__save-button_disabled" type="submit">Submit</button>
       </form>
     </div>
   </div>
   <footer class="footer">
     <div class="container">
-      <p class="footer__contacts">My contacts
-      <p>
+      <p class="footer__contacts">My contacts</p>
       <div class="footer__button-list">
         <a class="footer__button footer__vk-button" target="_blank" href="https://vk.com/id184147001">
           <img class="footer__but-image footer__vk-image" src="images/vkbutton.png" alt="vk link">
@@ -111,4 +128,5 @@
   </footer>
   <script src="js/index.js"></script>
 </body>
+
 </html>
