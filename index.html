@@ -1,64 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Portfolio</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="images/portfolio.webp" sizes="128x128">
-    <link rel="stylesheet" href="css/style.css">
-    <meta name="description" content="Portfolio of Aleksey Smirnov">
-    <meta name="author" content="Aleksey Smirnov">
-    <meta name="keywords" content="Портфолио Алексей Смирнов МФТИ ВШПИ MIPT HSSE Portfolio Aleksey Smirnov">
-  </head>
-  <body>
-    <header>
+
+<head>
+  <title>Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="images/portfolio.webp" sizes="128x128">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+  <meta name="description" content="Portfolio of Aleksey Smirnov">
+  <meta name="author" content="Aleksey Smirnov">
+  <meta name="keywords" content="Портфолио Алексей Смирнов МФТИ ВШПИ MIPT HSSE Portfolio Aleksey Smirnov">
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
       <h1 class="first_title">Portfolio</h1>
       <p class="line"></p>
-    </header>
-    <section class="description">
-      <img class="description__avatar" src="images/userImage.png" alt="avatar">
-      <div class="description__my-profile">
-        <h2 class="description__my-name">Aleksey Smirnov</h2>
-        <p class="description__my-status">Student of MIPT</p>
-      </div>
-    </section>
-    <section class="main-part">
-      <div class="main-part__cl-skills">
-        <h2 class="main-part__skills">My skills</h2>
-        <ul class="main-part__skills-list">
-          <li class="main-part__skill-name">C++</li>
-          <li class="main-part__skill-name">Git</li>
-          <li class="main-part__skill-name">Python</li>
-          <li class="main-part__skill-name">HTML</li>
-          <li class="main-part__skill-name">CSS</li>
-          <li class="main-part__skill-name">SQL</li>
-          <li class="main-part__skill-name">Linux</li>
-        </ul>
-      </div>
-      <div class="cl-education">
-        <h2 class="cl-education__education">Education</h2>
-        <ul class="cl-education__education-list">
-          <li class="cl-education__education-name">
-            <h3 class="cl-education__faculty">Bachelor of Software Engineering</h3>
-            <p class="cl-education__university">MIPT HSSE 2023-2027</p>
-          </li>
-        </ul>
-      </div>
-    </section>
-    <footer class="footer">
-      <p class="footer__contacts">My contacts<p>
+    </div>
+  </header>
+  <section class="description">
+    <img class="description__avatar" src="images/userImage.png" alt="avatar">
+    <div class="description__my-profile">
+      <h2 class="description__my-name">Aleksey Smirnov</h2>
+      <p class="description__my-status">Student of MIPT</p>
+    </div>
+  </section>
+  <section class="main-part">
+    <div class="main-part__cl-skills">
+      <h2 class="main-part__skills">My skills</h2>
+      <ul class="main-part__skills-list">
+        <li class="main-part__skill-name">C++</li>
+        <li class="main-part__skill-name">Git</li>
+        <li class="main-part__skill-name">Python</li>
+        <li class="main-part__skill-name">HTML</li>
+        <li class="main-part__skill-name">CSS</li>
+        <li class="main-part__skill-name">SQL</li>
+        <li class="main-part__skill-name">Linux</li>
+      </ul>
+    </div>
+    <div class="cl-education">
+      <h2 class="cl-education__education">Education</h2>
+      <ul class="cl-education__education-list">
+        <li class="cl-education__education-name">
+          <h3 class="cl-education__faculty">Bachelor of Software Engineering</h3>
+          <p class="cl-education__university">MIPT HSSE 2023-2027</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <div class="popup js-timer-popup">
+    <div class="popup__container">
+      <button class="close-btn popup__close-button js-popup-closer" type="button" aria-label="Закрыть">
+        <svg width="30" height="31" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M9.11941 21.7011L21 9.70113M20.8806 21.7011L9 9.70113" stroke="black" stroke-width="2"
+            stroke-linecap="round"></path>
+        </svg>
+        <p>Текстшрашр шршрша шраш4</p>
+      </button>
+      
+    </div>
+  </div>
+  <div class="popup js-form-popup">
+    <div class="popup__container">
+      <button class="close-btn popup__close-button js-popup-closer" type="button" aria-label="Закрыть">
+        <svg width="30" height="31" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M9.11941 21.7011L21 9.70113M20.8806 21.7011L9 9.70113" stroke="black" stroke-width="2"
+            stroke-linecap="round"></path>
+        </svg>
+      </button>
+
+      <h2 class="popup__title">Feedback form</h2>
+
+      <form class="popup__form" name="profile-edit" novalidate="">
+        <fieldset class="popup__fieldset">
+          <input class="popup__input popup__input_email" type="email" name="email" placeholder="E-mail" required=""
+            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+          <p class="popup__error-message popup__error-message_email popup__error-message_disabled">Incorrect e-mail
+          </p>
+
+          <input class="popup__input popup__input_text" type="text" name="text" placeholder="Message (10-100 symbols)"
+            required="" pattern="[a-zA-Z0-9 .(),<>!?;:*%@]{10,100}">
+          <p class="popup__error-message popup__error-message_text popup__error-message_disabled">Incorrect message
+          </p>
+        </fieldset>
+
+        <button class="popup__save-button popup__save-button_disabled" type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+  <footer class="footer">
+    <div class="container">
+      <p class="footer__contacts">My contacts
+      <p>
       <div class="footer__button-list">
-        <a class="footer__button footer__vk-button" href="https://vk.com/id184147001">
+        <a class="footer__button footer__vk-button" target="_blank" href="https://vk.com/id184147001">
           <img class="footer__but-image footer__vk-image" src="images/vkbutton.png" alt="vk link">
         </a>
-        <a class="footer__button footer__github-button" href="https://github.com/Alsmrnv">
+        <a class="footer__button footer__github-button" target="_blank" href="https://github.com/Alsmrnv">
           <img class="footer__but-image footer__github-image" src="images/githubbutton.png" alt="github link">
         </a>
-        <a class="footer__button footer__telegram-button" href="https://t.me/AlsSmirnv">
+        <a class="footer__button footer__telegram-button" target="_blank" href="https://t.me/AlsSmirnv">
           <img class="footer__but-image footer__telegram-image" src="images/telegrambutton.png" alt="telegram link">
         </a>
+      </div>
+      <p class="mail">Mail me: <a href="mailto:smirnov.aleksei.s@phystech.edu">smirnov.aleksei.s@phystech.edu</a></p>
     </div>
-      <p class="mail">Mail me: smirnov.aleksei.s@phystech.edu</p>
-    </footer>
-  </body>
+    <button class="js-form-popup-opener">Открыть форму</button>
+  </footer>
+  <script src="js/index.js"></script>
+</body>
 </html>
