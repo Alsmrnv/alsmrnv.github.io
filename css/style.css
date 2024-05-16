@@ -1,5 +1,53 @@
-header {
-  margin: 40px;
+:root {
+  --primary: #000000;
+  --accent: #afcbc1;
+  --secondary: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1920px;
+  padding: 0 40px;
+}
+
+button {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+}
+
+.close-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  padding: 8px;
+  border-radius: 100%;
+}
+
+.close-btn svg path {
+  transition: stroke .3s ease;
+}
+
+.close-btn:hover svg path {
+  stroke: red;
+}
+
+@media (max-width: 576px) {
+  .container {
+    padding: 0 20px;
+  }
+}
+
+.header {
+  padding: 40px 0;
 }
 
 .first_title {
@@ -16,7 +64,7 @@ header {
 
 .description {
   margin: auto;
-  background-color: #AFCBC1;
+  background-color: var(--accent);
   width: auto;
   text-align: center;
 }
@@ -37,7 +85,7 @@ header {
   padding-bottom: 15px;
 }
 
-.main-part__cl-skills{
+.main-part__cl-skills {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -67,7 +115,7 @@ header {
   font-size: 30px;
 }
 
-.cl-education{
+.cl-education {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -99,7 +147,7 @@ header {
 
 .cl-education__faculty {
   padding-left: 30px;
-  padding-right: 30px;  
+  padding-right: 30px;
 }
 
 .cl-education__university {
@@ -109,7 +157,7 @@ header {
 .footer {
   border-top: 1px solid rgba(84, 84, 84, 1);
   margin-top: 50px;
-  font-size: 30;
+  font-size: 30px;
 }
 
 .footer__contacts {
@@ -134,11 +182,46 @@ header {
 
 .footer__vk-image {
   margin-left: 20px;
-
 }
 
 .mail {
   font-family: Courier, monospace;
   font-size: 20px;
   margin: 20px;
+}
+
+/* POPUP START  */
+
+.popup {
+  width: 100vw;
+  height: 100vh;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  z-index: 1;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: rgba(0, 0, 0, 0.3);
+
+  visibility: hidden;
+  opacity: 0;
+
+  transition: all 0.3s;
+}
+
+.popup-opened {
+  visibility: visible;
+  opacity: 1;
+}
+
+
+.popup__container {
+  background-color: white;
+  padding: 20px;
+  border-radius: 12px;
 }
