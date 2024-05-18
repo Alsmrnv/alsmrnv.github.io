@@ -17,9 +17,6 @@ function startCountDown() {
 
     today = mm + "/" + dd + "/" + yyyy;
     console.log(today, graduation)
-    if (today > graduation) {
-        graduation = dayMonth + nextYear;
-    }
 
     const countDown = new Date(graduation).getTime();
     const x = setInterval(function () {
@@ -62,10 +59,13 @@ function startModalForm() {
     const inputPhone = form.querySelector('input[name="phone"]');
 
     const inputNameParent = inputName.parentElement;
-    const inputErrEl = inputNameParent.querySelector('.js-err-wrap')
+    const inputPhoneParent = inputPhone.parentElement;
+    const inputErrName = inputNameParent.querySelector('.js-err-name')
+    const inputErrPhone = inputPhoneParent.querySelector('.js-err-phone')
 
     inputName.addEventListener('input', () => {
-        inputErrEl.textContent = ''
+        inputErrName.textContent = ''
+        inputErrPhone.textContent = ''
     })
 
     form.addEventListener('submit', e => {
@@ -76,16 +76,27 @@ function startModalForm() {
         let phoneError = ''
 
         const nameValue = inputName.value.trim();
+        const phoneValue = inputPhone.value.trim();
 
         if (!nameValue) {
             nameError = 'Обязательное поле'
         } else if (nameValue.length < 2 || !/^[\u0400-\u04FF ]+$/.test(nameValue)) {
             nameError = 'Некорректный формат'
         }
+        
+        if (!phoneValue) {
+            phoneError = 'Обязательное поле'
+        } else if (phoneValue.length != 18) {
+            phoneError = 'Некорректный формат'
+        }
 
-        if (nameError || phoneError) {
+        if (nameError) {
+            inputErrName.textContent = nameError
+            return;
+        }
 
-            inputErrEl.textContent = nameError
+        if (phoneError) {
+            inputErrPhone.textContent = phoneError
             return;
         }
 
