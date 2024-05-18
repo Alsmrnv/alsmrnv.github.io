@@ -23,6 +23,23 @@ button {
   padding: 0;
 }
 
+.btn {
+    border-radius: 5px;
+    padding: 12px 20px;   
+    background-color: var(--primary);
+    color: var(--accent);
+}
+
+.btn:disabled {
+    cursor: auto;
+    color: var(--secondary);
+    background-color: var(--accent);
+}
+
+.btn:hover {
+    color: var(--secondary);
+}
+
 .close-btn {
   display: flex;
   align-items: center;
