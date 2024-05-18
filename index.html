@@ -95,17 +95,19 @@
         </svg>
       </button>
       <h2 class="popup__title">Feedback form</h2>
-      <form class="popup__form" name="profile-edit" novalidate="">
-        <fieldset class="popup__fieldset">
-          <input class="popup__input popup__input_email" type="email" name="email" placeholder="E-mail" required=""
-            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
-          <p class="popup__error-message popup__error-message_email popup__error-message_disabled">Incorrect e-mail</p>
-          <input class="popup__input popup__input_text" type="text" name="text" placeholder="Message (10-100 symbols)"
-            required="" pattern="[a-zA-Z0-9 .(),<>!?;:*%@]{10,100}">
-          <p class="popup__error-message popup__error-message_text popup__error-message_disabled">Incorrect message</p>
-        </fieldset>
-        <button class="popup__save-button popup__save-button_disabled" type="submit">Submit</button>
+      <form class="form" name="profile-edit" novalidate="" id="js-contact-form">
+            <label>
+                <input class="form__input" placeholder="Ваше имя" type="text" name="name">
+                <p class="js-err-wrap"></p>
+            </label>
+            <label>
+                <input class="form__input" placeholder="Номер телефона" type="text" name="phone">
+                <p class="js-err-wrap"></p>
+            </label>
+
+        <button class="btn form__button" type="submit">Отправить</button>
       </form>
+
     </div>
   </div>
   <footer class="footer">
@@ -124,8 +126,10 @@
       </div>
       <p class="mail">Mail me: <a href="mailto:smirnov.aleksei.s@phystech.edu">smirnov.aleksei.s@phystech.edu</a></p>
     </div>
-    <button class="js-form-popup-opener">Открыть форму</button>
+    <button class="btn js-form-popup-opener">Открыть форму</button>
   </footer>
+
+  <script src="js/imask.js"></script>
   <script src="js/index.js"></script>
 </body>
 
