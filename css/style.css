@@ -235,6 +235,15 @@ button {
   padding: 20px;
 }
 
+.popup__title {
+  margin: 0 0 20px;
+}
+
+.form__button {
+  margin-top: 15px;
+  margin-left: 37px;
+}
+
 .footer {
   border-top: 1px solid rgba(84, 84, 84, 1);
   margin-top: 50px;
@@ -248,7 +257,8 @@ button {
 }
 
 .footer__button-list {
-  display: block;
+  display: flex;
+  gap: 15px;
 }
 
 .footer__button {
@@ -269,6 +279,11 @@ button {
   font-family: Courier, monospace;
   font-size: 20px;
   margin: 20px;
+}
+
+.mail__link {
+  text-decoration: none;
+  color:#000000;
 }
 
 .popup {
@@ -303,4 +318,13 @@ button {
   background-color: white;
   padding: 20px;
   border-radius: 12px;
+}
+
+.js-err-wrap {
+  color: red;
+}
+
+
+.js-form-popup-opener {
+  margin: 10px 60px;
 }
