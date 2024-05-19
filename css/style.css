@@ -54,6 +54,12 @@ button {
   border-radius: 100%;
 }
 
+.popup__temp-btn {
+  position: absolute;
+  top: -28px;
+  right: -22px;
+}
+
 .close-btn svg path {
   transition: stroke 0.3s ease;
 }
